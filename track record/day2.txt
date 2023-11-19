@@ -1,0 +1,300 @@
+is vite and next js are same thing ?
+is vire is used to create next js app ?
+so why do we use command like create vite@latest to create next js app ?
+so why do when use vite to create project and when do we directly use npx create-next app latest ?
+do vite gives choices which framework do we want to use ?
+does vite provides ready made templates for variious framworks or if some one want to choose a diffrent set of technologies to work with ?
+is vite and next are sasme / if not why not ?
+what features of vite which makes the  development experience smooth and lean ?
+what are serverless functions. in next ?
+what is static site generatioin in react ?
+next provides the static site generation capability  right?
+no i means static , dynamic site etc . how many types are thre ?
+so can i say my personal cv website is static site and the amazon or google is the dynamic sites ?
+and what is the postcss ?
+and what is css preprocessors ?
+is sass is  css preprocessor ?
+name some of the most popular prec-processors ?
+so basically in good websites /applications developer writes modern developed css code which is basically converted into browser readable css code using preprocessors and post-css , which makes development conveinient , right ? which also means a quality developer should have skill of how to use preprocessors and postcss to write css fast and efficiently  with better designs right ?
+how can i learn amd master writing css code with preprocessors and postcss?
+what is the exact context or concept of render and compile ? are both a same thing ? if not then what are the key differences?
+what exctly is render means ? in simple words , easy understandable
+so rendering means when  the browser interprets the JavaScript to be sent to the client’s browser and compiling means when the browser interprets the whole html , css and all to create browser understandable or runnable code , right ?
+so can i say the broser first renders the code makes the dom ,  applying styles, running scripts then it compiles and displays the site , right ?
+also can i say the complling means translating one to another language where rendering means processsing and making the final product ?
+so i can say this is the realtion between  render and compile in a browser or in other words this is what happens after the browser receives all the files ,right ?
+so explain the render in context of useEffect  and usestate like when the stage changes what exactly occurs after that and what is it to do with render ?
+What is the difference between server-side and client-side rendering?
+which one should i choose static site rendering or dynamic site rendering ?
+which one should i choose static site rendering or dynamic site rendering ? give the answer in format of list
+What are some examples of SSR websites?
+what is dsr?
+websites that uses dsr ?
+ssr vs dsr ?
+dynamic site  vs static site  ?
+but the ssr also includes Interactivity ,Flexibility,Personalization with Performance,SEO,Security, Hosting so why dsr ?
+ssr vs dsr ? 
+does static site means no interactivity ? 
+no i mean does static site means no intereactivity with server ?
+how can i build dynamic server rendering website ?
+okay , answer this , if  i am using an api , the server does not need  to process anyting , i am reuesting ,
+fetching and geting data from the api and displaying it to the user , so does this mean this site is considered as static site ?
+okay , sothat means this site is a server side rendering dynamic site , right ?
+in useEffect hook , is array of dependecy means the useEffect willl only occur when the array changes?
+ This can help optimize performance by preventing unnecessary executions of the effect.
+
+It’s important to correctly specify all the dependencies to ensure your effect runs when it should and doesn’t run when it shouldn’t. If you don’t specify the array, the effect will run after every render. If you specify an empty array ([]), the effect will only run once after the initial render.
+
+write a function in onChage with spread operator and url as an argument in input field . 
+
+write a onSubmit function in a form ? 
+
+what does redux-toolkit offeres ? 
+what exactly is redux ?
+what is three js /
+what is framer motion ?
+list the most commonly used tools/technologies along with react like resux ?
+what is  crossbroser js linrary ?
+expllin what is cross broser js library in context of three js
+
+
+list the most commonly used js libraries and what they are used to do  along with react like three js ?
+more poular  JavaScript libraries that are used with react
+how to make api reqquests within your application in a structured and scalable way ?
+provider and consumer in api calls in vite project ?
+does provider (imported from react-redux) serves my whole App component of my application ? why ? 
+how to use this provider ? 
+react-redux and redux-toolkit we are using ?
+what does configureStore does in @reduxjs/toolkit ? 
+what does reducer does in configureStore of @reduxjs/toolkit ? 
+what does middleware  does in configureStore of @reduxjs/toolkit ? 
+what does middleware  does in configureStore of @reduxjs/toolkit ? 
+expalin this code - 
+import {configureStore} from "@reduxjs/toolkit'
+import {articleApi } from './article'
+
+export const store = configureStore({
+    reducer:{},
+    middleware : (getDefaultMiddleware) => getDefaultMiddleware().concat()
+})
+// store is a global state which holds the entire information of our application , reucer slicing the required part for our application  
+// find more on redux -toolkit official website 
+export const store = configureStore({
+    reducer:[articleApi.reducerPath]:articleApi.reducer,
+    middleware : (getDefaultMiddleware) => getDefaultMiddleware().concat(articleApi.middleware)
+})
+what does CreateApi does in '@reduxjs/toolkit/query/react'
+what does FetchBaseQuery does in '@reduxjs/toolkit/query/react'
+what does CreateApi does in '@reduxjs/toolkit/query/react'
+
+import {createApi,FetchBaseQuery} from '@reduxjs/toolkit/query/react'
+export const articleApu = createApi({
+    reducerPath : 'articleApi',
+
+})
+
+
+import store from './store'
+<provider store = {store }><App> </provider>
+what does this store = {store } says ? 
+
+what does an endpoint mean in an api call 
+crearing endpoints ,
+import {createApi,FetchBaseQuery} from  '@reduxjs/toolkit/query/react' 
+export const articleApu = createApi({
+    reducerPath : 'articleApi',
+    endpoint : (builder) => ({
+        getsummary : builder.query({
+            query:(params) =>'test';
+        })
+    }) 
+})
+
+give an example of how to use FetchBaseQuery query with an api to perform api queries ? 
+how to use baseUrl to perform queries  on an api in  FetchBaseQuery ? 
+baseurl,createapi,fetchBaseQuery,reducerpath , basequery,endpoints , query - how use all of this with createapi to generate an api slice structure that contains redux logic that encapsulates the data fetching and catching process to define a set of endpoints that describe and retieves data from the backend api s and other sync sources . 
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+
+const rapidApiKey = import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
+
+export const articleApi = createApi({
+    reducerPath: 'articleApi',
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'https://article-extractor-and-summarizer.p.rapidapi.com/',
+        prepareHeaders: (headers) => {
+            headers.set('X-RapidAPI-Key', rapidApiKey);
+            headers.set('X-RapidAPI-Host', 'article-extractor-and-summarizer.p.rapidapi.com');
+
+            return headers;
+        },
+    }),
+    endpoints: (builder) => ({
+        getSummary: builder.query({
+            // encodeURIComponent() function encodes special characters that may be present in the parameter values
+            // If we do not properly encode these characters, they can be misinterpreted by the server and cause errors or unexpected behavior. Thus that RTK bug
+            query: (params) => `summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`,
+        }),
+    }),
+})
+
+export const { useLazyGetSummaryQuery } = articleApi
+explain the role of baseurl an options in all this ? 
+ok so what is the role of special api keys in making api keys in mking api requests ? 
+what is the role  of prepareHeaders  and headers in making api requests ? 
+
+so if we want to summurize it we first need to create a the api (createApi) , give it a resucer path and give it a 
+special access key with a basequery , baseUrl and set the headers and endpoints and making the api reuest with query
+request is complete , right ? 
+
+what does endpoints represents ? 
+what is this builder and builder.query?
+how we import the env file in react ? 
+how useLazyGetSummaryQuery works ?
+what does this 
+            query: (params) => `summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`,
+line says 
+
+how to use encodeURIComponent in encoding url in redux ? 
+
+why we wrapped our app in provider ? 
+fetch().then , .catch - promise 
+
+
+  const [article, setArticle] = useState({
+    url: "",
+    summary: "",
+  });
+what does this means ? 
+
+
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery(); - what is this saying ?
+
+  const { data }  - what does this {data} says  ? is data is an object .
+show how to use spread operator with an example ? 
+
+why whenever wwe are working with react , we have to add event.preventDefault ?
+
+remember what we want to do is ,
+we have a form where we have an input and a button 
+we enters a url in the input field we get a summary about the linnk/url and also we get that link displayed 
+as history just under the input field .
+
+so how do we do the first thing(showing the article summary under the input field ) , currently we have successfullt maing api request and getting the data from that 
+api , 
+demo.jsx
+once we set the article summary then we wanna push it to the upadatd all articals 
+so we used a new useState 
+  const [allArticles, setAllArticles] = useState([]);
+and in this we pushed 
+    if (data?.summary) {
+      const newArticle = { ...article, summary: data.summary };
+      // we pushed 
+
+      const updatedAllArticles = [newArticle, ...allArticles];
+
+      // update state and local storage
+      setArticle(newArticle);
+      setAllArticles(updatedAllArticles);
+      localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
+    }
+  };
+do we added localStorage to not to lose what we have in the page ? 
+(losing content in the page reload on closing the tab or lose the connection  in not a pleasent experirnce in web development )
+
+for this we will use localStorage and a useEffect hoook , 
+  // Load data from localStorage on mount
+  useEffect(() => {
+    const articlesFromLocalStorage = JSON.parse(
+      localStorage.getItem("articles")
+    );
+
+and to check ifwe have the articles from localStorage in that case we wanna set all articles from local storage 
+to be equal to articles from localStorage to the state , via 
+    if (articlesFromLocalStorage) {
+      setAllArticles(articlesFromLocalStorage);
+    }
+  }, []);
+this use effect using  an empty array or  [] which means it render on the initial page load 
+
+
+and in this line 
+      localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
+we are updating the article after we are getting it , we are using stringify as localStorage on ly contains strings 
+
+now to test it out we need to implement jsx , for our browse url history 
+
+      {/* Display Result */}
+      <div className='my-10 max-w-full flex justify-center items-center'>
+        {isFetching ? (
+          <img src={loader} alt='loader' className='w-20 h-20 object-contain' />
+        ) : error ? (
+             {error?.data?.error}
+        ) : (
+          article.summary && (
+            <div>
+             <h2 className='font-satoshi font-bold text-gray-600 text-xl'>
+                Article <span className='blue_gradient'>Summary</span>
+              </h2>
+              <div className='summary_box'>
+                <p className='font-inter font-medium text-sm text-gray-700'>
+                  {article.summary}
+                </p>
+            </div>
+          )
+
+
+how the its done ,  there are 
+article.js
+store.js
+under services means tells how its done ? 
+
+
+if my App.jsx is handling every thing  like , 
+      <div className='app'>
+        <Hero />
+        <Demo />
+      </div>
+but why do we need ,
+        ReactDOM.createRoot(document.getElementById("root")).render(
+        <React.StrictMode>
+            <Provider store={store}>
+            <App />
+            </Provider>
+        </React.StrictMode>
+        );
+this ? 
+
+
+explain this postcss.config.cjs ?
+        module.exports = {
+            plugins: {
+                tailwindcss: {},
+                autoprefixer: {},
+            }
+        }
+
+explain this tailwind.config.cjs, 
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{html,js,jsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        satoshi: ['Satoshi', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      }
+    },
+  },
+  plugins: [],
+}
+
+
+
+explain this vite.config.js,
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})

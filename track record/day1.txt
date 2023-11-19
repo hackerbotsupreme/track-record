@@ -1,0 +1,144 @@
+so what is the meaning of running create-react-app with npx as the prefix
+no i mean what are the differences when we use - npm create-react-app and npx create-react-app
+
+
+
+day - 2 
+project - https://github.com/hackerbotsupreme/laribright-react-news-app/tree/master
+1. how to add bootstrap  into my react project ?
+1. when should we use nav + nav.link and when should we use dropdown in react-bootstrap
+1. what is container in react-bootstarp
+1. do we use container when we needs a responsive  element ?
+1. horizontally padded container  - like div?
+1. so can i say that in this case i wanted the content of navbar to be perfectly aligned with perfect balance  of margin and padding and not only that i neddded the navbar itself to take the fullwidth while also takes care of the content automatically  that is why we used container is inside the navbar
+1. Navbar.Toggle aria-controls="navbar-nav" - what does this line means ? what does aria-controls + id is used for ?
+1. Button variant="outline-primary" - what does this line means ? what does the varient means ?but what is special about  it when i can can do the aame with  regular expressions too ?
+1. why use use .env file(a new seperate file ) just to keep an api key ?
+1.React Bootstrap tries to adopt React components as much as possible and tries to avoid classes1 - what does this line means ?
+1. development, testing, and production - what are these  stages?
+1. How do I set up a development environment for my React app?which files do we probably use to configure the development environment for each stages fo app/web development in rect like .env etc?
+1.can i say hook means which fetches data using a link and reuturns as a usable data
+1.what is the concept of the hook , kkep it short and plain , simple language
+1.so in simple  terms  hooks are usesd to use state/currnt data of target element without doing anything  which makes code faster ,shorter and better , right? react have severel hooks and each hook has a diifferent usecase , like useState and useEffect aare used to fetch data from the link right ?
+1.how many hooks does react have ?
+1.list them with what are they used for like to fetch data or to add side-effects etc?
+1.does state refers to the current data of the element ?
+1.
+const handleSearch = (event) => {
+    event.preventDefault();
+    setCategory("");
+    setSearchTerm(event.target.search.value);
+  }; - what does -     event.preventDefault(); - this line is doing here
+1. is  useEffect: This hook lets you perform side effects in your components. Side effects could be data fetching, subscriptions, or manually changing the DOM12. means   This hook sets what will happen ?
+
+
+react-vite-ts_todoList_live
+
+
+1. what is react-router-dom
+1.how many types of routing are there ?
+2. what is roting in react ?
+2.on which basis routing is been devided into three parts ?
+2.which type of routing is used nowadays ? / most used and preffered routing method ?
+2.list of technologies which utilizes dynamic routing like react-router-dom ?
+3.What is the difference between client-side and server-side routing?
+4. which one is to use ?
+5. What are some examples of websites that use client-side routing?
+2.What are some examples of websites that use server-side routing?
+2.if dynamic roting is cliet side routing (doesnot refrreshes on routing thus prides smoothness but takes time in first  load)then which routing does refreshes static or default routing ? and which side routing can we call it ?
+1. tll me how we manage rotings on each type of routing? 
+3. which routers uses dynamic routing in react ? 
+3. which routers uses static  routing in react ? 
+2.
+so in react / web development there are teo types of routing server side and client side but in general there are three - static , dynamic and default so dont confuse both are different concept used in different fields and they alos share some similarities too?
+3. so there is javascript in both sides server side and client side ? server side - server code , client side - dom manipulation ,making requests to hte server , and handle events .. 
+
+On the client side, JavaScript is used to create interactive web pages. It can manipulate the Document Object Model (DOM), handle user events (like clicks or key presses), make AJAX requests to the server, and more.
+
+On the server side, JavaScript (specifically Node.js) can be used to build the web server itself. This includes handling HTTP requests and responses, accessing databases, file systems, and more. Server-side JavaScript can also render HTML to be sent to the client.
+
+5.so is in dynamic routing the site the site does not refreshes/relaods  ?
+6.does  refce command creates basic react  arrow function for react in react ?
+7. is next js is the one of the most demanding technologies nowadays ?
+8.is next js is a js framework that is built on top of the react which akes  it the upgraded version of the react and more conveinient
+1.what problems does react js has ?
+1.
+no i mean what features react did not have that are solved in next , talk about the problems, issues that ware created becuse of them  and importance of solving them
+9. what problem does next js solves exactly?
+10. do i need es7+ react snippets extension  in order for refce to work
+1.what does  gist does in react code
+1.How do I create a Gist?
+1.how can we install tailwind css when we are using vite
+1.what is the -d flg does in npm install
+1.how can we edit the tailwind.config.js to create some default styling in our project ?
+3.do i always need to first download and import  or to use cdn to use things in react ?
+4. is vite and next js are same thing ?
+5. so vite is a tool and next is a framework ?
+8.does app.css holds the default stylings/base setup for the project ?
+9. does needs of your project. decides my folder structure hence choses the frawork or what tools to use ?
+8. What are some best practices for choosing a framework?
+9.no i mean tools to create/generate gradients gradients for front end the normal coding css is very tough
+9. What are some other CSS tools that can help me with frontend development?
+10.which type of project can we deploy with vercel ?
+11. list all the js frameworks that are commonly used nowadays
+12.React.js (React): React is a JavaScript library  , is react is a libray or a framework ?
+13. so next is framework and react is a libary ?
+12.is next js is a framework ?
+13. so next is just the superior ?
+14.but if next js have all that of react plus lattest indemand features then why not ?
+15 . so give me some facts/situations  when react will be used over next js
+16. so give points in format of list like if you wnat all this use react and if you want all that you should use next ..
+17.how to use useState and useEffect to fecth data ..
+18.how to use useState and useEffect to fecth data ..
+19.explain useEffect hook
+20.so the function defines what the effect is goona be but what does the other argument does ?
+21. 
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+} - explain this step by step
+
+22.so the button click sends signal to the setcount then it updates the value but what does the useEffect is doing here ?
+23.so the setcount passes the upadated value to hte count ?
+24.so first the count state is 0 then when clicked the setcount is called with the argument (count+1) as a value which gets passed to count which signal useState that the state is changed but how does this tells useEffect to re-render there is not any connection?
+25.so can i say changing state variables triggers render which causes the useEffect to rerun  ?
+26.how React ensures that the UI always stays up-to-date with the latest state.
+27.when shou;d we use onchange and when should we use onClick?
+28.why we use double classnames ?
+29. list api tools for web developers? free ones .. 
+3.list api tools for web developers? free ones ..
+31.what does .io extension indicates ?
+32.
+input + submit , usestate ,useeffect , fetch , async , await , object destructuring  - make a demo code , liitle project using all these where i can just type and search anything by typing any topic and clicking the submit button ..
+33. explain it step by step 
+34.
+useEffect(() => {
+    const fetchData = async () => {
+      if (query !== '') {
+        const response = await fetch(`https://api.example.com/search?q=${query}`);
+        const data = await response.json();
+        setData(data);
+      }
+    };
+
+    fetchData();
+  }, [query]); - what does  - [query] - means in this code ?
+35.
+      {data && <div>{JSON.stringify(data)}</div>}
+- what does this means?
